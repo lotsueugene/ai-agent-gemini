@@ -42,10 +42,8 @@ response = client.models.generate_content(
 #RESPONSE METADATA
 usage = response.usage_metadata
 
-# print("Prompt tokens:", usage.prompt_token_count)
-# print("Response tokens:", usage.candidates_token_count)
 
-
+#Get response
 def get_response_text():
     if args.verbose:
         print(response.text)
@@ -56,7 +54,6 @@ def get_response_text():
     else:
        print(response.text)
 
-# print(response.text)
-# response,user_prompt,args
+
 
 get_response_text()
