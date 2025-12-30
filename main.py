@@ -5,7 +5,7 @@ import argparse
 from google.genai import types
 from call_function import available_functions, call_function
 from prompts import system_prompt
-from config import WORKING_DIR
+
 
 
 #LOAD API
@@ -56,7 +56,7 @@ def get_response_text():
         print("Response:")
         print(response.text)
     else:
-        function_results = []  # store function results for later
+        function_results = [] 
 
         for function_call in response.function_calls:
             print(f"Calling function: {function_call.name}({function_call.args})")
